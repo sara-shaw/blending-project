@@ -1,0 +1,41 @@
+body {
+    margin: 1rem 0;
+    background: #111;
+}
+
+/********** NO BLACK *************/
+.cmy {
+    background: url("img/268px-CMYK_separation_no_black.jpg") top left, 
+    url("img/268px-CMYK_separation_no_black.jpg") center center, 
+    url("img/268px-CMYK_separation_no_black.jpg") bottom right;
+    height: 200px;
+    }
+.cmy:hover {
+    background-position: top center, center center, bottom center;
+}
+
+/********** WITH BLACK *************/
+.cmyk {
+    background: 
+    url("img/201px-CMYK_separation_maximum_black.jpg") top left, 
+    url("img/201px-CMYK_separation_maximum_black.jpg") 402px 303px, 
+    url("img/201px-CMYK_separation_maximum_black.jpg") 201px -150px, 
+    url("img/201px-CMYK_separation_maximum_black.jpg") bottom right;
+    background-size: 25% 400%;
+    height: 150px;
+}
+.cmyk:hover {
+    background-position: top center, center 303px, center -150px, bottom center;
+}
+
+.cmy, .cmyk {
+    margin: .25rem auto;
+    width: 804px;
+    background-blend-mode: multiply;
+    background-repeat: repeat-y;
+    transition: .25s .5s;
+    border-radius: .25rem;
+}
+.cmy:hover, .cmyk:hover {
+    transition: 1.5s 0;
+}
